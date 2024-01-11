@@ -19,7 +19,12 @@ const RandomColor = () => {
     setColor(hexColor);
   };
 
-  const handleCreateRandomRGBColor = () => {};
+  const handleCreateRandomRGBColor = () => {
+    const r = randomColorUtility(256);
+    const g = randomColorUtility(256);
+    const b = randomColorUtility(256);
+    setColor(`rgb(${r}, ${g}, ${b})`);
+  };
   return (
     <div style={{ width: '100vw', height: '100vh', background: color }}>
       <button onClick={() => setTypeOfColor('hex')}>Create Hex Color</button>
@@ -33,6 +38,20 @@ const RandomColor = () => {
       >
         Create Random Color
       </button>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          alignContent: 'center',
+          color: '#fff',
+          marginTop: '50px',
+        }}
+      >
+        <h3>{typeOfColor === 'rgb' ? 'RGB Color' : 'HEX Color'}</h3>
+        <h1>{color}</h1>
+      </div>
     </div>
   );
 };
