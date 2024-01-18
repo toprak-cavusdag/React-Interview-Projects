@@ -1,4 +1,5 @@
 import { Accordion, ImageSlider, RandomColor, StarRating } from './components';
+import LoadMoreButton from './components/loadMoreButton/LoadMoreButton';
 
 function App() {
   return (
@@ -7,7 +8,8 @@ function App() {
       {/* <Accordion /> */}
       {/* <RandomColor /> */}
       {/* <StarRating numOfStars={10} /> */}
-      <ImageSlider url={'https://picsum.photos/v2/list'} limit={10} />
+      {/* <ImageSlider url={'https://picsum.photos/v2/list'} limit={10} /> */}
+      <LoadMoreButton />
     </div>
   );
 }
